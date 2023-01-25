@@ -125,6 +125,7 @@ ul  li{
    justify-content: center;
    width: 20px;
    height: 20px;
+   cursor: pointer;
 }
 .btn span{
    width: 10px;
@@ -179,6 +180,7 @@ input[type="checkbox"]:checked + .list::after{
 .button{
    display: flex;
    justify-content: center;
+   margin-right: 15px;
 }
 .button button{
    padding:3px 5px;
@@ -200,11 +202,17 @@ input[type="checkbox"]:checked + .list::after{
    .heading h1{
       font-size: 30px;
    }
-   input{
-      width: 80%;
+   form input{
+      width: 70%;
       font-size: 16px;
+      outline: none;
    }
-   button{
-      width: 63px;
+   .button button{
+      padding: 2px 3px;
+      outline: none;
    }
+   .button button:first-child{
+      margin-right: 5px;
+   }
+   
 }

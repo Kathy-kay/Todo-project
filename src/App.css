@@ -1,0 +1,210 @@
+ :root{
+    --brightBlue: hsl(220, 98%, 61%);
+    --checkBg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --vLightGray: hsl(236, 33%, 92%);
+    --vLightGrayish: hsl(233, 11%, 84%);
+    --dGrayisgBlue: hsl(236, 9%, 61%);
+    --vDarkGrayishBlue:  hsl(235, 19%, 35%);
+    --vDarkBlue: hsl(235, 21%, 11%);
+    --vDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --lightGrayishBlue: hsl(234, 39%, 85%);
+    --lightGrayishBlueHover :  hsl(236, 33%, 92%);
+    --darkGrayishBlue: hsl(234, 11%, 52%);
+    --vdarkGrayishBlue:  hsl(233, 14%, 35%);
+    --vDrakGrayishBlue: hsl(237, 14%, 26%);
+ }
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Josefin Sans', sans-serif;
+}
+.App{
+   width: 100%;
+   height: 100vh;
+   background-color: var(--vDarkBlue);
+   position: relative;
+}
+img{
+   max-width: 100%;
+
+   
+}
+.picture img{
+   width: 100%;
+   height: clamp(120px, 40vh, 300px);
+}
+.todo-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.todo{
+   width: 550px;
+   height: 77vh;
+   position: absolute;
+   top: 70px;
+   background-color: transparent;
+   
+}
+.heading{
+   display: flex;
+   justify-content: space-between;
+}
+.heading h1{
+   color: #fff;
+   font-size: 50px;
+   letter-spacing: 10px;
+}
+.sun{
+   height: 26px;
+}
+.input{
+   width: 100%;
+   height: 70px;
+   background-color: var(--vDarkDesaturatedBlue);
+   margin-top: 40px;
+   border-radius: 7px;
+   padding: 20px;
+   
+}
+form input{
+   width: 85%;
+   padding: 5px;
+   background-color: var(--vDarkDesaturatedBlue);
+   outline:none;
+   border: 1px solid var(--vDarkDesaturatedBlue);
+   color:var(--dGrayisgBlue);
+   font-size:20px
+
+}
+.add-task{
+   font-size: 15px;
+   padding:3px;
+   width: 70px;
+   height: 32px;
+   border-radius: 8px;
+   border: 1px solid var(--vDarkDesaturatedBlue);
+   background-color: var(--dGrayisgBlue);
+   color:var(--vDarkDesaturatedBlue);
+   cursor: pointer;
+}
+.todo-list{
+   width: 100%;
+   background-color: var(--vDarkDesaturatedBlue);
+   margin-top: 25px;
+   border-radius: 8px;
+   
+   
+}
+.todo-item{
+   display: flex;
+   justify-content: space-between;
+   padding: 0 8px 0 27px;
+   color: var(--vLightGrayish);
+}
+ul  li{
+   list-style: none;
+   font-size: 20px;
+   position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+   padding-left: 20px;
+} 
+.check-task{
+   display: flex;
+   align-items: center;
+}
+.btn{
+   border-radius: 50%;
+   background-color: transparent;
+   border: solid grey;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 20px;
+   height: 20px;
+}
+.btn span{
+   width: 10px;
+   height: 10px;
+   display: block;   
+   border-radius: 50%;
+   
+}
+.btn.active span{
+   background-color: blueviolet;
+}
+/*input[type="checkbox"]{
+   opacity: 0;
+   margin-left: 10px;
+  
+    
+}
+.list::before{
+   content: '';
+   position: absolute;
+   top: 1 ;
+   left: -17px;
+   width: 20px;
+   height: 20px;
+   border-radius: 100%;
+   background-color: transparent;
+   border: 1px solid gray;
+   cursor: pointer;
+   pointer-events: none;
+}
+.list::after{
+   content: '';
+   position: absolute;
+   top: 20px;
+   left:-12px;
+   width: 5px;
+   height: 8px;
+   border: solid #fff;
+   border-width: 0 6px 6px 0;
+   transition: 0.2s ease;
+
+}
+input[type="checkbox"]:not(:checked) + .list::after{
+   transform: scale(0);
+   opacity: 0;
+}
+input[type="checkbox"]:checked + .list::after{
+   transform: rotate(35deg) scale(1);
+   background-color: blueviolet;
+   opacity: 1;
+}*/
+.button{
+   display: flex;
+   justify-content: center;
+}
+.button button{
+   padding:3px 5px;
+   background-color: transparent;
+   border: 1px solid var(--vDarkDesaturatedBlue);
+   border-radius: 5px;
+   cursor: pointer;
+   margin-left: 6px;
+   font-size: 20px;
+   color: var(--dGrayisgBlue);
+   
+   
+}
+@media (max-width:630px){
+   .todo{
+      width: 80%;
+      margin: auto;
+   }
+   .heading h1{
+      font-size: 30px;
+   }
+   input{
+      width: 80%;
+      font-size: 16px;
+   }
+   button{
+      width: 63px;
+   }
+}

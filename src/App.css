@@ -2,16 +2,19 @@
     --brightBlue: hsl(220, 98%, 61%);
     --checkBg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
     --vLightGray: hsl(236, 33%, 92%);
-    --vLightGrayish: hsl(233, 11%, 84%);
-    --dGrayisgBlue: hsl(236, 9%, 61%);
-    --vDarkGrayishBlue:  hsl(235, 19%, 35%);
-    --vDarkBlue: hsl(235, 21%, 11%);
-    --vDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --todoTextColor: hsl(233, 11%, 84%);
+    --inputText: hsl(236, 9%, 61%);
+    --bodyBackground: hsl(235, 21%, 11%);
+    --primaryColor: hsl(235, 24%, 19%);
     --lightGrayishBlue: hsl(234, 39%, 85%);
     --lightGrayishBlueHover :  hsl(236, 33%, 92%);
     --darkGrayishBlue: hsl(234, 11%, 52%);
     --vdarkGrayishBlue:  hsl(233, 14%, 35%);
     --vDrakGrayishBlue: hsl(237, 14%, 26%);
+    --buttonBackground: hsl(236, 9%, 61%);
+ 
+    
+    
  }
 
 *{
@@ -23,7 +26,7 @@
 .App{
    width: 100%;
    height: 100vh;
-   background-color: var(--vDarkBlue);
+   background-color: var(--bodyBackground);
    position: relative;
 }
 img{
@@ -57,13 +60,15 @@ img{
    font-size: 50px;
    letter-spacing: 10px;
 }
+
 .sun{
    height: 26px;
+   cursor: pointer;
 }
 .input{
    width: 100%;
    height: 70px;
-   background-color: var(--vDarkDesaturatedBlue);
+   background-color: var(--primaryColor);
    margin-top: 40px;
    border-radius: 7px;
    padding: 20px;
@@ -72,10 +77,10 @@ img{
 form input{
    width: 85%;
    padding: 5px;
-   background-color: var(--vDarkDesaturatedBlue);
+   background-color: var(--primaryColor);
    outline:none;
-   border: 1px solid var(--vDarkDesaturatedBlue);
-   color:var(--dGrayisgBlue);
+   border: 1px solid var(--primaryColor);
+   color:var(--inputText);
    font-size:20px
 
 }
@@ -85,14 +90,14 @@ form input{
    width: 70px;
    height: 32px;
    border-radius: 8px;
-   border: 1px solid var(--vDarkDesaturatedBlue);
-   background-color: var(--dGrayisgBlue);
-   color:var(--vDarkDesaturatedBlue);
+   border: 1px solid var(--primaryColor);
+   background-color: var(--buttonBackground);
+   color:var(--primaryColor);
    cursor: pointer;
 }
 .todo-list{
    width: 100%;
-   background-color: var(--vDarkDesaturatedBlue);
+   background-color: var(--primaryColor);
    margin-top: 25px;
    border-radius: 8px;
    
@@ -102,7 +107,7 @@ form input{
    display: flex;
    justify-content: space-between;
    padding: 0 8px 0 27px;
-   color: var(--vLightGrayish);
+   color: var(--todoTextColor);
 }
 ul  li{
    list-style: none;
@@ -185,14 +190,23 @@ input[type="checkbox"]:checked + .list::after{
 .button button{
    padding:3px 5px;
    background-color: transparent;
-   border: 1px solid var(--vDarkDesaturatedBlue);
+   border: 1px solid var(--primaryColor);
    border-radius: 5px;
    cursor: pointer;
    margin-left: 6px;
    font-size: 20px;
-   color: var(--dGrayisgBlue);
+   color: var(--inputText);
    
    
+}
+[data-theme="light"]{
+   --bodyBackground:hsl(236, 33%, 92%);
+   --primaryColor: hsl(233, 11%, 84%);
+   --inputText: hsl(235, 21%, 11%); 
+   --buttonBackground:hsl(235, 24%, 19%);
+   --todoTextColor: hsl(235, 21%, 11%);
+
+  
 }
 @media (max-width:630px){
    .todo{
@@ -206,6 +220,9 @@ input[type="checkbox"]:checked + .list::after{
       width: 70%;
       font-size: 16px;
       outline: none;
+   }
+   ul li{
+      font-size: 14px;
    }
    .button button{
       padding: 2px 3px;

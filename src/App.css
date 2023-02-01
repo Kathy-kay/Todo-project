@@ -208,6 +208,10 @@ input[type="checkbox"]:checked + .list::after{
 
   
 }
+.heading button{
+   background-color: transparent;
+   border: none;
+}
 @media (max-width:630px){
    .todo{
       width: 80%;

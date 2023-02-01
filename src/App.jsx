@@ -13,12 +13,12 @@ function App() {
     const [todoList, setTodoList] = useState([])
     const [editId, setEditId] = useState(0)
     const [complete, setComplete] = useState(false)
-    const [lightMode, setLightMode] = useState(false)
+    const [lightMode, setLightMode] = useState('dark')
 
 
 
     const switchTheme = () =>{
-      const newTheme = lightMode? 'light': 'dark';
+      const newTheme = lightMode === 'dark' ? 'light': 'dark';
       setLightMode(newTheme)
     }
 
@@ -104,17 +104,20 @@ function App() {
             <div className="todo">
               <div className="heading">
                 <h1>TODO</h1>
-                {lightMode ?
+                <button onClick={switchTheme}>
+                {lightMode === 'light' ?
                 <img src={moon} 
                 alt="moon icon"
                 className='sun'
-                onClick={switchTheme}/>
+                />
                 :
                 <img src={sun} 
                 alt="sun icon"
                 className='sun'
-                onClick={switchTheme}/>
-                }
+               />}  
+                </button>
+                
+                
               </div>
               <form className="input" onSubmit={handleSubmit}>
               <input type="text"
